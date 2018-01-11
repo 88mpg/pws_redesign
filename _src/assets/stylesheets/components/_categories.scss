@@ -1,0 +1,54 @@
+$breakpoints: (
+  small: (414px, 2),
+  medium: (768px, 3),
+  large: (1200px, 4)
+);
+
+$grid-gap: 1rem;
+
+.categories {
+  padding: 3rem;
+  &__container {
+    @include container($siteWidth);
+  }
+
+  &__grid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-auto-rows: minmax(10rem, auto);
+
+    @each $breakpoints, $breakpoint in $breakpoints {
+      $width: nth($breakpoint, 1);
+      $columns: nth($breakpoint, 2);
+      @media (min-width: $width) {
+        grid-template-columns: repeat($columns, 1fr);
+      }
+    }
+
+    &--item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border: 1px solid var(--medium);
+      border-radius: .4rem;
+      padding: 3rem;
+      transition: all 250ms ease;
+      text-decoration: none;
+      &:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+
+      span {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

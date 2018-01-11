@@ -1,0 +1,15 @@
+.section__header {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px dashed var(--medium);
+  margin-bottom: 3rem;
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  &--cta {
+    margin-left: auto;
+    @include cta;
+  }
+}

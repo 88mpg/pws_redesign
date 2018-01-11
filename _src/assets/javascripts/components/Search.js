@@ -3,6 +3,7 @@ class Search {
     this.searchIcon = document.querySelector('.js-searchButton')
     this.searchField = document.querySelector('.search')
     this.searchInput = document.querySelector('.search input[type="search"]')
+    this.searchClose = document.querySelector('.js-searchClose')
 
     this.activeClass = `is-active`
 
@@ -16,6 +17,11 @@ class Search {
       !this.searchField.classList.contains(this.activeClass)
         ? this.expandSearch()
         : this.collapseSearch()
+    })
+
+    this.searchClose.addEventListener('click', e => {
+      e.preventDefault();
+      this.collapseSearch();
     })
   }
 

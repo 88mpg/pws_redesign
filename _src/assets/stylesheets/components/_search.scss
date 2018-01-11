@@ -1,22 +1,22 @@
 .search {
+  display: flex;
   background: var(--primary);
   box-shadow: 0 0 4rem -1rem colors(black);
-  display: flex;
-  align-items: center;
   height: $navigation-height;
   padding: 0 3rem;
   transform: translate3d(0, -100%, 0);
   transition: transform 200ms ease;
   z-index: 10;
-  &.is-active {
-    transform: translate3d(0, 0, 0);
-  }
+  &.is-active { transform: translate3d(0, 0, 0); }
 
   &__container {
     @include container($siteWidth);
+    display: flex;
+    align-items: center;
   }
 
   input {
+    flex: 1;
     appearance: textfield;
     background-color: transparent;
     border-bottom: 1px dashed var(--dark);
@@ -25,11 +25,38 @@
     font-size: 1.8rem;
     text-transform: uppercase;
     height: 100%;
-    width: 100%;
     &:focus { outline: none; }
     @include placeholder {
       color: var(--light);
       opacity: 0.8;
     }
+  }
+
+  &__close {
+    position: relative;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark);
+    height: $navigation-height/2;
+    width: $navigation-height/2;
+    border-radius: 50%;
+    cursor: pointer;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 30%;
+      background-color: var(--light);
+      transition: background-color 150ms ease;
+    }
+    &:hover {
+      &::before,
+      &::after { background-color: var(--primary); }
+    }
+    &::before { transform: rotate(45deg); }
+    &::after { transform: rotate(-45deg); }
   }
 }

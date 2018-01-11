@@ -12,6 +12,10 @@
     top: 0;
     z-index: 9999999;
     + * { margin-top: -($navigation-height); } // offset search area
+    // TODO: add javascript to detect scroll position
+    // top: -6rem;
+    // transition: transform 150ms ease;
+    // &:hover { transform: translate3d(0, 6rem, 0); }
   }
 
   &__container {
@@ -42,8 +46,8 @@
       display: inline-block;
       fill: var(--light);
       height: 100%;
-      max-width: 1.5rem;
-      max-height: 1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
       transition: fill 150ms ease;
       &:hover { fill: var(--primary); }
       .transparent { fill: var(--dark); }
