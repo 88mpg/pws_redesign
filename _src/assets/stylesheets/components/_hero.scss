@@ -1,0 +1,44 @@
+.hero {
+  // background-color: gold;
+  padding: 5rem 3rem;
+  &__container {
+    @include container($siteWidth);
+    border-bottom: 1px dashed var(--medium);
+  }
+
+  header {
+    position: relative;
+    color: var(--light);
+
+    hgroup {
+      padding: 3rem;
+      position: absolute;
+      bottom: 0;
+      text-shadow: 1px 1px 1px colors(black);
+
+      h1 {
+        font-size: 4.6rem;
+        line-height: 1.2;
+        max-width: 90rem;
+        margin-bottom: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        max-width: 95rem;
+      }
+    }
+
+    img {
+      box-shadow: 0 0 3rem 0 colors(black);
+      max-width: 100%;
+    }
+  }
+
+  aside {
+    margin: 1.5rem 0;
+
+    ul { @include attribution; }
+  }
+}

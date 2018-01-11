@@ -1,0 +1,10 @@
+.footer {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 3rem;
+  box-shadow: 0 0 4rem -1rem colors(black);
+
+  &__container {
+    @include container($siteWidth);
+  }
+}

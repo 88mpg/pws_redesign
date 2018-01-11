@@ -1,0 +1,26 @@
+# Package Files #
+*.jar
+*.war
+*.ear
+.metadata
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+*/target/
+target/
+*.iml
+*.ipr
+*.iws
+*.class
+*.DS_Store
+*.idea
+*.classpath
+*.project
+*.settings/
+*.settings
+*.vagrant
+*.vlt
+git_stats
+hosts_*
+node_modules
+_dist

@@ -1,0 +1,12 @@
+@mixin attribution() {
+  display: flex;
+  li {
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+      &::after {
+        content: "\00b7";
+        margin-left: 1rem;
+      }
+    }
+  }
+}

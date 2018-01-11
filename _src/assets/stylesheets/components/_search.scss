@@ -1,0 +1,35 @@
+.search {
+  background: var(--primary);
+  box-shadow: 0 0 4rem -1rem colors(black);
+  display: flex;
+  align-items: center;
+  height: $navigation-height;
+  transform: translate3d(0, -100%, 0);
+  transition: transform 200ms ease;
+  z-index: 10;
+  &.is-active {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &__container {
+    @include container($siteWidth);
+  }
+
+  input {
+    appearance: textfield;
+    background-color: transparent;
+    border-bottom: 1px dashed var(--dark);
+    border: 0;
+    color: var(--light);
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    height: 100%;
+    width: 100%;
+    &:focus { outline: none; }
+    @include placeholder {
+      color: var(--light);
+      opacity: 0.8;
+    }
+  }
+}

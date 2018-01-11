@@ -1,0 +1,19 @@
+@mixin underline($color) {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(100% + .3rem);
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 2px;
+    background: $color;
+    display: block;
+    transition: all 250ms ease;
+    width: 0;
+  }
+  &:hover {
+    &::after { width: 100%; }
+  }
+}

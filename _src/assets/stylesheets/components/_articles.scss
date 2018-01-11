@@ -1,0 +1,79 @@
+// First value is the breakpoint, second value is the amt of columns
+$breakpoints: (
+  small: (414px, 1),
+  medium: (768px, 2),
+  large: (1200px, 3)
+);
+
+// Actual grid-gap is weird, let's use margins
+$grid-gap: 1rem;
+$outer-margin: $grid-gap;
+
+.articles {
+  padding: 0 3rem 5rem;
+
+  &__container {
+    @include container($siteWidth);
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    border-bottom: 1px dashed var(--medium);
+    margin-bottom: 1.5rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-gap: 5rem;
+    // grid-column-gap: 2rem;
+    // grid-row-gap: 5rem;
+    grid-auto-rows: minmax(20rem, auto);
+
+    @each $breakpoints, $breakpoint in $breakpoints {
+      $width: nth($breakpoint, 1);
+      $columns: nth($breakpoint, 2);
+      @media (min-width: $width) {
+        grid-template-columns: repeat($columns, 1fr);
+      }
+    }
+
+    article {
+      color: colors(black);
+      transition: box-shadow 150ms ease;
+      // border: 1px solid var(--medium);
+      // border-radius: .3rem;
+      // &:hover { box-shadow: 0 0 3rem -1rem colors(black); }
+      &:hover {
+        img { box-shadow: 0 0 3rem -1rem colors(black); }
+      }
+
+      img {
+        border: 1px solid var(--medium);
+        width: 100%;
+        transition: box-shadow 150ms ease;
+      }
+
+      hgroup {
+        padding: 1.5rem 0;
+
+        h1 {
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+          border-bottom: none;
+        }
+
+        h2 {
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 1.8;
+        }
+      }
+
+      ul {
+        @include attribution;
+        border-bottom: 1px dashed var(--medium);
+        padding-bottom: 1.5rem;
+      }
+    }
+  }
+}

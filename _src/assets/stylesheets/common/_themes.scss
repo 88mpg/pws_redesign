@@ -1,0 +1,20 @@
+body {
+  --light: white;
+  --medium: lighten(black, 90%);
+  --dark: black;
+  --primary: darken(tomato, 25%);
+  --secondary: gold;
+}
+
+.theme__ {
+  &hulk_hogan {
+    --light: gold;
+    --dark: darken(tomato, 20%);
+    --primary: #fd6416;
+  }
+  &macho_man {
+    --light: #a6d10f;
+    --dark: darken(#77308c, 15%);
+    --primary: #f69209;
+  }
+}
