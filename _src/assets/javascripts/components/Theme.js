@@ -2,11 +2,7 @@ class Theme {
 
   constructor() {
     this.themes = [
-      "Hulk Hogan",
-      "Macho Man",
-      "Roddy Piper",
-      "Bret Hart",
-      "Shawn Michaels"
+      "Macho Man"
     ]
 
     this.themeMenu = document.querySelector('select[name="themes"]')

@@ -27,6 +27,8 @@
     align-items: center;
     font-size: 3rem;
     height: 100%;
+    font-style: italic;
+    font-weight: 900;
     img {
       height: 100%;
       // box-shadow: 0 0 4rem -1rem colors(black);
@@ -71,7 +73,7 @@
   }
 
   &__social {
-    background-color: var(--secondary);
+    background-color: var(--light);
     margin-left: -3rem;
     margin-right: -3rem;
     padding: .5rem 3rem;
@@ -90,7 +92,7 @@
     svg {
       height: 1.5rem;
       width: 1.5rem;
-      .transparent { fill: var(--secondary); }
+      .transparent { fill: var(--light); }
     }
   }
 }
