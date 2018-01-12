@@ -24,6 +24,8 @@ $grid-gap: 1rem;
   }
 
   &__grid {
+    background-color: $site-background;
+    padding: 0 3rem;
     display: grid;
     grid-gap: 5rem;
     grid-auto-rows: minmax(20rem, auto);
