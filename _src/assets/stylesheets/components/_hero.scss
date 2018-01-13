@@ -2,7 +2,7 @@
   // background-color: gold;
   padding: 5rem 3rem;
   &__container {
-    @include container($siteWidth);
+    @include container($site-width);
     border-bottom: 1px dashed var(--medium);
   }
 

@@ -19,7 +19,7 @@
   }
 
   &__container {
-    @include container($siteWidth);
+    @include container($site-width);
     height: $navigation-height;
     display: flex;
     align-items: center;
@@ -29,10 +29,16 @@
     margin-right: auto;
     display: flex;
     align-items: center;
-    font-size: 3rem;
     height: 100%;
-    font-style: italic;
-    font-weight: 900;
+
+    a {
+      color: var(--light);
+      font-size: 3rem;
+      font-style: italic;
+      font-weight: 900;
+      text-decoration: none;
+      @include underline(var(--primary));
+    }
     img {
       height: 100%;
       // box-shadow: 0 0 4rem -1rem colors(black);
@@ -83,7 +89,7 @@
     padding: .5rem 3rem;
 
     &--container {
-      @include container($siteWidth);
+      @include container($site-width);
     }
 
     ul {

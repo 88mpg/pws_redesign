@@ -2,7 +2,7 @@ class Carousel {
   constructor(carousel) {
     this.carousel = carousel
     this.container = this.carousel.querySelector('.carousel__slides')
-    this.previousButton = this.carousel.querySelector('.carousel__controls-prev')
+    this.previousButton = this.carousel.querySelector('.carousel__controls-previous')
     this.nextButton = this.carousel.querySelector('.carousel__controls-next')
     this.slides = Array.from(this.carousel.querySelectorAll('.carousel__slides > li'))
     this.slideCount = this.slides.length

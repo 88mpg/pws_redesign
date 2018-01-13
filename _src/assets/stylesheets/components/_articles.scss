@@ -10,7 +10,7 @@ $grid-gap: 1rem;
   padding: 0 3rem 5rem;
 
   &__container {
-    @include container($siteWidth);
+    @include container($site-width);
   }
 
   &__category {
@@ -42,6 +42,7 @@ $grid-gap: 1rem;
       position: relative;
       color: colors(black);
       transition: box-shadow 150ms ease;
+      border-bottom: 1px dashed var(--medium);
       // border: 1px solid var(--medium);
       // border-radius: .3rem;
       // &:hover { box-shadow: 0 0 3rem -1rem colors(black); }
@@ -49,6 +50,8 @@ $grid-gap: 1rem;
         .articles__category { box-shadow: 1px 1px 0 0 colors(black); }
         img { box-shadow: 0 0 3rem -1rem colors(black); }
       }
+
+      & > a { text-decoration: none; }
 
       img {
         // border: 1px solid var(--medium);
@@ -73,7 +76,6 @@ $grid-gap: 1rem;
 
       ul {
         @include attribution;
-        border-bottom: 1px dashed var(--medium);
         padding-bottom: 1.5rem;
       }
     }

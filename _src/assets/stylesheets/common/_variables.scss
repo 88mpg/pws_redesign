@@ -2,9 +2,11 @@
 $colors: (
   white: #fff,
   black: #333,
+  medium: #999
 );
 
-$siteWidth: 1440;
+$site-width: 1440;
+$article-width: 860;
 $site-background: colors(white);
 
 $navigation-height: 8rem;

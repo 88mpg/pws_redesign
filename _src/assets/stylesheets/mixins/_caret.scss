@@ -1,0 +1,15 @@
+@mixin caret($direction, $size) {
+  display: block;
+  content: "";
+  height: $size;
+  width: $size;
+  border-top: $size/3 solid;
+  border-right: $size/3 solid;
+  border-color: var(--dark);
+  @if $direction == 'right' {
+    transform: rotate(45deg);
+  }
+  @if $direction == 'left' {
+    transform: rotate(-45deg) scaleX(-1);
+  }
+}

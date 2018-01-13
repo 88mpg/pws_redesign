@@ -10,7 +10,7 @@
   &.is-active { transform: translate3d(0, 0, 0); }
 
   &__container {
-    @include container($siteWidth);
+    @include container($site-width);
     display: flex;
     align-items: center;
   }

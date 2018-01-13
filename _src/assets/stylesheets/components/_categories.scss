@@ -9,7 +9,7 @@ $grid-gap: 1rem;
 .categories {
   padding: 3rem;
   &__container {
-    @include container($siteWidth);
+    @include container($site-width);
   }
 
   &__grid {
