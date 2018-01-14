@@ -10,6 +10,6 @@
 
   &--cta {
     margin-left: auto;
-    @include cta;
+    @include cta('dark');
   }
 }

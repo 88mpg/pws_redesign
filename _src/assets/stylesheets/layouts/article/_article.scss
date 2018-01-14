@@ -1,40 +1,66 @@
 .article {
   color :colors(black);
-  padding: 10rem 3rem 3rem;
-  &__container { @include container($article-width); }
+  padding: 10rem 3rem 8rem;
+  &__container {
+    @include container($article-width);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
 
+  article {
+    max-width: 100%;
 
-  header {
-    border-bottom: 1px dashed var(--medium);
-    padding-bottom: 1.5rem;
+    header {
+      border-bottom: 1px dashed var(--medium);
+      padding-bottom: 1.5rem;
 
-    aside {
-      ul { @include attribution; }
+      aside {
+        ul { @include attribution; }
+      }
+    }
+
+    h1 {
+      font-size: 3.4rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      line-height: 1.6;
+      color: colors(medium);
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-family: 'Roboto Slab', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 2;
+      margin: 3rem 0;
+    }
+
+    .quote {
+      padding-top: 6rem;
     }
   }
 
-  h1 {
-    font-size: 3.4rem;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-  }
+  &__sidebar {
+    position: sticky;
+    top: 15rem;
+    margin-left:10rem;
+    height: 50rem;
+    min-width: 26rem;
+    // background-color: var(--dark);
+    // color: var(--light);
+    border: 1px dashed var(--medium);
+    border-radius: .3rem;
+    padding: 3rem;
 
-  h2 {
-    font-size: 1.8rem;
-    line-height: 1.8;
-    color: colors(medium);
-    margin-bottom: 1.5rem;
-  }
-
-  p {
-    font-family: 'Roboto Slab', serif;
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 1.6;
-    margin: 3rem 0;
-  }
-
-  .quote {
-    padding-top: 6rem;
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
   }
 }

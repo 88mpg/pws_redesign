@@ -10,7 +10,7 @@ class Navigation {
 
   addEventListeners() {
     window.addEventListener('scroll', () => {
-      console.log('scrolling');
+      // console.log('scrolling');
     })
   }
 

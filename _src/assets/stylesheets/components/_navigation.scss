@@ -86,7 +86,7 @@
     background-color: var(--light);
     margin-left: -3rem;
     margin-right: -3rem;
-    padding: .5rem 3rem;
+    padding: 0 3rem;
 
     &--container {
       @include container($site-width);
@@ -95,6 +95,8 @@
     ul {
       display: flex;
       justify-content: flex-end;
+      align-items: center;
+      height: 3rem;
 
       li:not(:first-of-type) { margin-left: 1.5rem; }
     }
@@ -103,6 +105,20 @@
       height: 1.5rem;
       width: 1.5rem;
       .transparent { fill: var(--light); }
+    }
+  }
+
+  &__articleProgress {
+    display: none;
+    #article & {
+      display: block;
+      height: .5rem;
+      background-color: var(--primary);
+      margin-left: -3rem;
+      margin-right: -3rem;
+      width: 100vw;
+      transform: translate3d(-100%, 0, 0);
+      transition: transform 150ms linear;
     }
   }
 }

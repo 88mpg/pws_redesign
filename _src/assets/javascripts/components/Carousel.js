@@ -33,10 +33,10 @@ class Carousel {
 
     document.addEventListener('DOMContentLoaded', () => {
       // add data attributes to slides
-      this.slides.forEach((el, i) => el.setAttribute('data-slide', i+1))
+      this.slides.forEach((el, i) => el.setAttribute('data-slide', i + 1))
 
       // add data attributes to indicators
-      // this.dots.forEach((el, i) => el.setAttribute('data-slide', i+1))
+      // this.dots.forEach((el, i) => el.setAttribute('data-slide', i + 1))
 
       // add helper classes when the carousel loads
       this.container.firstElementChild.classList.add('is-active')
@@ -75,6 +75,13 @@ class Carousel {
     this.previousItem.className = 'is-previous'
     this.nextItem.className = 'is-next'
   }
+
+  // updatePagination() {
+  //   this.pages.forEach((page, i) => {
+  //     page.classList.remove('is-active')
+  //     if (i == this.currentSlide) page.classList.add('is-active')
+  //   })
+  // }
 }
 
 // class Carousel {
