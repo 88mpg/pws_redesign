@@ -11,7 +11,9 @@ class BackToTop {
   addEventListeners() {
     this.button.addEventListener('click', e => {
       e.preventDefault()
-      jump('body')
+      jump('body', {
+        duration: 750
+      })
     })
 
     window.addEventListener('scroll', e => {
