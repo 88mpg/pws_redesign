@@ -1,5 +1,5 @@
 .hero {
-  background: url('https://images.unsplash.com/photo-1488656711237-487ce1cc53b7?auto=format&fit=crop&w=1440&q=80&h=600') no-repeat center center;
+  background: var(--dark) url('https://images.unsplash.com/photo-1488656711237-487ce1cc53b7?auto=format&fit=crop&w=1440&q=80&h=600') no-repeat center center;
   background-size: cover;
   height: 60rem;
   max-height: calc(100vh - 11rem);
