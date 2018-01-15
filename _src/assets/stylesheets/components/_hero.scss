@@ -1,9 +1,23 @@
 .hero {
-  // background-color: gold;
+  background: url('https://images.unsplash.com/photo-1488656711237-487ce1cc53b7?auto=format&fit=crop&w=1440&q=80&h=600') no-repeat center center;
+  background-size: cover;
+  height: 60rem;
+  max-height: calc(100vh - 11rem);
   padding: 5rem 3rem;
+  margin-bottom: 6rem;
+  box-shadow: 0 0 6rem 0 #111 inset;
+
   &__container {
     @include container($site-width);
-    border-bottom: 1px dashed var(--medium);
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+  }
+
+  article {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5rem;
+    max-width: 80rem;
   }
 
   header {
@@ -11,22 +25,19 @@
     color: var(--light);
 
     hgroup {
-      padding: 3rem;
-      position: absolute;
-      bottom: 0;
+      padding: 0 0 3rem;
       text-shadow: 1px 1px 1px colors(black);
 
       h1 {
         font-size: 4.6rem;
         line-height: 1.2;
-        max-width: 90rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 3rem;
       }
 
       h2 {
         font-size: 1.8rem;
-        font-weight: 600;
-        max-width: 95rem;
+        font-weight: 400;
+        line-height: 1.6;
       }
     }
 
@@ -37,8 +48,14 @@
   }
 
   aside {
-    margin: 1.5rem 0;
-
-    ul { @include attribution; }
+    color: var(--light);
+    margin: 1.5rem 0 0;
+    ul {
+      @include attribution;
+      a {
+        color: var(--light);
+        &:hover { color: var(--primary); }
+      }
+    }
   }
 }

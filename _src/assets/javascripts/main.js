@@ -4,6 +4,10 @@ import Search from './components/Search'
 import Carousel from './components/Carousel'
 import ArticleProgress from './components/ArticleProgress'
 
+import BackToTop from './components/BackToTop'
+
+new BackToTop()
+
 if (document.querySelector('.navigation__header')) new Navigation();
 if (document.querySelector('select[name="themes"]')) new Theme();
 if (document.querySelector('.search')) new Search();
