@@ -1,4 +1,8 @@
 .search {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
   display: flex;
   background: var(--primary);
   box-shadow: 0 0 4rem -1rem colors(black);

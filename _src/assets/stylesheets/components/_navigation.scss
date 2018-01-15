@@ -10,14 +10,12 @@
     flex-direction: column-reverse;
     top: 0;
     z-index: 9999999;
-    + * { margin-top: -($navigation-height); } // offset search area
     position: relative;
-    // position: sticky;
     transition: transform 200ms ease;
     &.is-collapsed {
       position: sticky;
-      top: -6rem;
-      &:hover { transform: translate3d(0, 6rem, 0); }
+      top: -($navigation-height - 3rem);
+      &:hover { transform: translate3d(0, $navigation-height - 3rem, 0); }
     }
   }
 
@@ -120,6 +118,7 @@
     display: none;
     #article & {
       display: block;
+      position: absolute;
       height: .3rem;
       background-color: var(--primary);
       margin-left: -3rem;
