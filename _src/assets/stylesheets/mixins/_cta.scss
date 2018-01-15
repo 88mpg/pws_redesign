@@ -1,11 +1,9 @@
 @mixin cta($style) {
   display: inline-flex;
   align-items: center;
-
   border-radius: 3rem;
   font-size: 1.4rem;
   padding: 1rem 2rem;
-  margin-bottom: 1rem;
   text-decoration: none;
   transition: all 150ms ease;
   @if $style == 'light' {

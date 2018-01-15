@@ -19,6 +19,9 @@
         ul { @include attribution; }
       }
     }
+    section {
+      padding-top: 3rem;
+    }
 
     h1 {
       font-size: 3.4rem;
@@ -27,18 +30,31 @@
     }
 
     h2 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
+      font-weight: 400;
       line-height: 1.6;
       color: colors(medium);
       margin-bottom: 1.5rem;
     }
 
     p {
-      font-family: 'Roboto Slab', serif;
+      // font-family: 'Roboto Slab', serif;
       font-size: 2rem;
       font-weight: 400;
-      line-height: 2;
+      line-height: 1.6;
       margin: 3rem 0;
+      strong { font-weight: 600; }
+    }
+
+    figure {
+      border: 1px dashed var(--medium);
+      padding: 1.5rem;
+      margin: 6rem 0;
+      img { max-width: 100%; }
+      figcaption {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+      }
     }
 
     .quote {
@@ -50,13 +66,14 @@
     position: sticky;
     top: 15rem;
     margin-left:10rem;
-    height: 50rem;
     min-width: 26rem;
     // background-color: var(--dark);
     // color: var(--light);
     border: 1px dashed var(--medium);
     border-radius: .3rem;
-    padding: 3rem;
+    padding: 1.5rem;
+
+    img { max-width: 100%; }
 
     h1 {
       font-size: 1.6rem;

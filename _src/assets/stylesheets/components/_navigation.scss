@@ -8,14 +8,17 @@
   &__header {
     display: flex;
     flex-direction: column-reverse;
-    position: sticky;
     top: 0;
     z-index: 9999999;
     + * { margin-top: -($navigation-height); } // offset search area
-    // TODO: add javascript to detect scroll position
-    // top: -6rem;
-    // transition: transform 150ms ease;
-    // &:hover { transform: translate3d(0, 6rem, 0); }
+    position: relative;
+    // position: sticky;
+    transition: transform 200ms ease;
+    &.is-collapsed {
+      position: sticky;
+      top: -6rem;
+      &:hover { transform: translate3d(0, 6rem, 0); }
+    }
   }
 
   &__container {
@@ -33,11 +36,14 @@
 
     a {
       color: var(--light);
-      font-size: 3rem;
-      font-style: italic;
+      font-size: 2.6rem;
       font-weight: 900;
       text-decoration: none;
       @include underline(var(--primary));
+      &::after {
+        height: .3rem;
+        top: calc(100% - .3rem);
+      }
     }
     img {
       height: 100%;
@@ -104,6 +110,8 @@
     svg {
       height: 1.5rem;
       width: 1.5rem;
+      transition: fill 150ms ease;
+      &:hover { fill: var(--primary); }
       .transparent { fill: var(--light); }
     }
   }
@@ -112,7 +120,7 @@
     display: none;
     #article & {
       display: block;
-      height: .5rem;
+      height: .3rem;
       background-color: var(--primary);
       margin-left: -3rem;
       margin-right: -3rem;

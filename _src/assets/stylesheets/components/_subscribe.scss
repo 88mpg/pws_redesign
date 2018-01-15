@@ -1,6 +1,6 @@
 $breakpoints: (
   small: (414px, 1),
-  medium: (768px, 2),
+  medium: (1024px, 2),
 );
 
 .subscribe {
@@ -56,14 +56,32 @@ $breakpoints: (
     margin-bottom: 5rem;
   }
 
-  input {
+  form {
     margin-top: auto;
-    text-indent: 2rem;
-    font-size: 1.6rem;
-    font-weight: 600;
-    border: none;
-    appearance: none;
-    height: 3rem;
-    padding: 2rem 0;
+    background: gold;
+    display: flex;
+
+    input {
+      flex: 1;
+      padding: 2rem 0;
+      height: 100%;
+      text-indent: 2rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      outline: 0;
+      border: none;
+      appearance: none;
+    }
+
+    button {
+      appearance: none;
+      border: 0;
+      padding: 0 2rem;
+      background-color: var(--primary);
+      margin-left: auto;
+      cursor: pointer;
+      &:hover { svg { fill: var(--light); } }
+      svg { transition: all 150ms ease; }
+    }
   }
 }
