@@ -1,11 +1,31 @@
 .article {
   color :colors(black);
-  padding: 10rem 3rem 8rem;
+  padding: 6rem 3rem 8rem;
   &__container {
     @include container($article-width);
     display: flex;
     justify-content: center;
     align-items: flex-start;
+  }
+
+  &__chapters {
+    ol {
+      display: flex;
+      justify-content: space-between;
+      li {
+        flex-grow: 1;
+        flex-basis: 0;
+        margin: 0 1rem;
+        a {
+          @include cta('dark');
+          display: flex;
+          font-size: 1.4rem;
+          padding: 3rem 0;
+          border-radius: .4rem;
+          justify-content: center;
+        }
+      }
+    }
   }
 
   article {
@@ -36,6 +56,19 @@
 
     section {
       padding-top: 3rem;
+
+      h2,
+      h3 {
+        font-size: 2.4rem;
+        padding-bottom: .5rem;
+        border-bottom: 1px dashed var(--medium);
+        margin: 3rem 0;
+      }
+
+      h2 {
+        margin-top: 10rem;
+        font-size: 3.2rem;
+      }
 
       p {
         // font-family: 'Roboto Slab', serif;

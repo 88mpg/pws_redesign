@@ -12,7 +12,6 @@ class Navigation {
 
   addEventListeners() {
     window.addEventListener('scroll', () => {
-      console.log(scrollPosition('static'));
       (scrollPosition('static') > 50)
         ? this.addActiveClass()
         : this.removeActiveClass()

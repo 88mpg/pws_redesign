@@ -5,6 +5,7 @@
   max-height: calc(100vh - 11rem);
   padding: 5rem 3rem;
   margin-bottom: 6rem;
+  box-shadow: 0 0 6rem 0 #111 inset;
 
   &__container {
     @include container($site-width);
