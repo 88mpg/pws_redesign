@@ -58,13 +58,12 @@ $breakpoints: (
 
   form {
     margin-top: auto;
-    background: gold;
     display: flex;
+    background-color: var(--primary);
 
     input {
       flex: 1;
       padding: 2rem 0;
-      height: 100%;
       text-indent: 2rem;
       font-size: 1.6rem;
       font-weight: 600;
